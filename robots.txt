@@ -1,0 +1,4 @@
+User-agent: Yandex
+Allow: /
+Host: https://sergey-ok.ru
+Sitemap: http://sergey-ok.ru/sitemap.xml

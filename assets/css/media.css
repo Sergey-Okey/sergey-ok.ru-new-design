@@ -1,0 +1,151 @@
+@media only screen and (max-width: 767px) {
+  body {
+    position: relative;
+    margin: 0;
+  }
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: inherit;
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    border-bottom: solid 3px rgba(255, 255, 255, 0.4039215686);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+  .header h1 {
+    margin: 10px 0;
+  }
+  .window {
+    margin: 20px 10px;
+    border-radius: 30px;
+    height: 100%;
+  }
+  .windows {
+    border-radius: 30px;
+  }
+  .header_content {
+    width: 95%;
+  }
+  main {
+    overflow-x: hidden;
+  }
+  .greting_content {
+    width: 95%;
+    flex-direction: column;
+    gap: 0;
+  }
+  .greting_content .greting_prevew {
+    z-index: -1;
+    opacity: 0.2;
+    margin: 0;
+    width: 100%;
+  }
+  .greting_content .greting_prevew #neon {
+    width: 400px;
+    justify-content: center;
+    display: none;
+  }
+  .greting_content .greting_prevew #skill {
+    display: none;
+  }
+  .greting_content .greting_title {
+    width: 100%;
+    height: 100%;
+  }
+  .header_content #nav {
+    display: none;
+  }
+  .skills {
+    width: 100%;
+    padding: 20px 0;
+  }
+  .skills .skills_content {
+    width: 100%;
+  }
+  .skills .skills_list {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 1;
+  }
+  .skills .skills_list .skills_item {
+    width: 150px;
+    border-radius: 30px;
+    z-index: 2;
+  }
+  .portfolio {
+    padding: 30px 0;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+  }
+  .portfolio_container {
+    width: 95%;
+    padding: 0;
+    gap: 50px;
+  }
+  .portfolio .portfolio_item {
+    margin: 0 auto;
+    flex-wrap: wrap;
+    border-radius: 30px;
+    padding: 10px;
+  }
+  .portfolio .portfolio_item h1 {
+    font-size: 1.5rem;
+  }
+  .portfolio .portfolio_item p {
+    font-size: 1rem;
+  }
+  .portfolio .item_title {
+    order: 2;
+  }
+  .portfolio .item_img {
+    width: 100%;
+  }
+  .portfolio .item_img img {
+    order: 1;
+    width: 100%;
+    border-radius: 20px;
+  }
+  .about {
+    padding: 20px 0;
+    width: 100%;
+  }
+  .about .about_container {
+    width: 100%;
+    padding: 20px;
+    border-radius: 30px;
+  }
+  .about .about_container h1 {
+    font-size: 2rem;
+  }
+  .about .about_items #yellow {
+    display: none;
+  }
+  .footer {
+    box-shadow: 0;
+    margin: 0;
+  }
+  .footer .section_nav {
+    flex-wrap: wrap;
+    background: radial-gradient(100% 100% at 50% 50%, #a100ff 0%, #71c4ff 100%);
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+  }
+  .footer .section_link {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .footer .section_link span {
+    text-align: center;
+  }
+  .sidebar_mobile {
+    display: block;
+    transition: height 0.3s ease-in-out;
+  }
+  .sidebar_desktop {
+    display: none;
+  }
+}/*# sourceMappingURL=media.css.map */

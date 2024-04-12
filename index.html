@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Современный сайт, для вас и вашего бизнеса" />
+	<title>SOK | Главная</title>
+	<link rel="stylesheet" href=".//assets/fonts/Rubintek/stylesheet.css">
+	<link rel="stylesheet" href=".//assets/fonts/NexArt/stylesheet.css">
+	<link rel="stylesheet" href=".//assets/fonts/Onest/stylesheet.css">
+	<link rel="stylesheet" href="./assets/css/style.css">
+	<link rel="stylesheet" href="./assets/css/media.css">
+	<link rel="stylesheet" href="./assets/css/normalize.css">
+	<link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
+	<meta name="yandex-verification" content="f324b0ec67f2ee9c" />
+	<script src=".//assets/js/scripts.js"></script>
+</head>
+
+<body>
+	<div class="window">
+		<div class="windows">
+			<header class="header">
+				<div class="header_content">
+					<div class="logo">
+						<h1>
+							<a href="index.html">S<span class="rotateSymbol">&lt;&gt;</span>K</a>
+						</h1>
+					</div>
+					<nav class="nav" id="nav">
+						<ul>
+							<li><a href="index.html" onclick="activateLink(this)">Главная</a></li>
+							<li><a href="#about" onclick="activateLink(this)">Обо мне</a></li>
+							<li><a href="#product" onclick="activateLink(this)">Проекты</a></li>
+							<li><a href="#contact" onclick="activateLink(this)">Контакты</a></li>
+						</ul>
+					</nav>
+					<div class="icon-sidebar" onclick="openSidebar()">
+						<img src=".//assets/images/header/sidebar-icon.webp" alt="sidebar-icon" style="width: 40px;">
+					</div>
+
+					<div class="sidebar_desktop">
+						<span class="close-btn" onclick="closeSidebar()" style="float: right;">✖</span>
+						<h2>Обратная связь</h2>
+						<form action="feedback.php" method="post">
+							<div class="form-group">
+								<label for="name">Имя:</label>
+								<input type="text" name="name" id="name" class="form-control" required>
+							</div>
+							<div class="form-group">
+								<label for="email">Email:</label>
+								<input type="email" name="email" id="email" class="form-control" required>
+							</div>
+							<div class="form-group">
+								<label for="message">Сообщение:</label>
+								<textarea name="message" id="message" class="form-control" required></textarea>
+							</div>
+							<input type="submit" value="Отправить" class="btn-sider">
+						</form>
+					</div>
+					<div class="sidebar_mobile">
+						<span class="close-btn" onclick="closeSidebar()" style="float: right;">✖</span>
+						<nav class="nav">
+							<ul>
+								<li><a href="index.html" onclick="activateLink(this)">Главная</a></li>
+								<li><a href="#about" onclick="activateLink(this)">Обо мне</a></li>
+								<li><a href="#product" onclick="activateLink(this)">Проекты</a></li>
+								<li><a href="#contact" onclick="activateLink(this)">Контакты</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</header>
+
+			<main>
+				<div class="greting">
+					<div class="greting_content">
+						<div class="greting_title">
+							<span class="animated-letter" style="animation-delay: 0.5s">П</span>
+							<span class="animated-letter" style="animation-delay: 1s">р</span>
+							<span class="animated-letter" style="animation-delay: 1.5s">и</span>
+							<span class="animated-letter" style="animation-delay: 2s">в</span>
+							<span class="animated-letter" style="animation-delay: 2.5s">е</span>
+							<span class="animated-letter" style="animation-delay: 3s">т</span>
+							<span class="animated-letter" style="animation-delay: 3.5s">!</span>
+							<h2 class="animated-heading" style="animation-delay: 4s">Меня зовут <br> Сергей Борисов</h2>
+							<p class="animated-paragraph" style="animation-delay: 4.5s">Я занимаюсь веб-дизайном, frontend
+								разработкой
+								уже год. Вам нужен дизайн сайта, верстка сайта или, может быть, сайт "под ключ"? Тогда свяжитесь
+								со
+								мной.
+							</p>
+							<button class="animated-button" style="animation-delay: 5s">
+								<a href="https://wa.me/79961647574">Написать</a>
+							</button>
+						</div>
+						<div class="greting_prevew">
+							<img id="neon" src=".//assets/images/greting/Ellipse 1.webp" alt="Ellipse1">
+							<img id="skill" src=".//assets/images/greting/Group 2.webp" alt="Group2">
+						</div>
+					</div>
+				</div>
+		</div>
+	</div>
+
+	<article class="skills">
+		<div class="skills_content">
+			<h1>Мои навыки</h1>
+			<div class="skills_list">
+				<div class="skills_item">
+					<img src=".//assets/images/skills/html.webp" alt="">
+					<span>Html</span>
+				</div>
+				<div class="skills_item">
+					<img src=".//assets/images/skills/css.webp" alt="">
+					<span>Css</span>
+				</div>
+				<div class="skills_item">
+					<img src=".//assets/images/skills/js.webp" alt="">
+					<span>Js</span>
+				</div>
+				<div class="skills_item">
+					<img src=".//assets/images/skills/react.webp" alt="">
+					<span>React</span>
+				</div>
+			</div>
+			<div class="skills_list">
+				<div class="skills_item">
+					<img src=".//assets/images/skills/bootstrap.webp" alt="">
+					<span>Bootstrap</span>
+				</div>
+				<div class="skills_item">
+					<img src=".//assets/images/skills/node.webp" alt="">
+					<span>Node</span>
+				</div>
+				<div class="skills_item">
+					<img src=".//assets/images/skills/sass.webp" alt="">
+					<span>Sass</span>
+				</div>
+			</div>
+		</div>
+	</article>
+
+	<article id="product" class="portfolio">
+		<div class="portfolio_container">
+			<div class="portfolio_item">
+				<div class="item_img">
+					<img src=".//assets/images/portfolio/case1.webp" alt="">
+				</div>
+				<div class="item_title">
+					<h1>Верстка первого шаблона</h1>
+					<p>Познакомьтесь с моим первым сайтом, где я воплотил идею шаблона, через код и открыл для себя
+						волшебство фронтенд-разработки</p>
+					<button><a href="https://sergey-okey.github.io/Case_1/">Перейти</a></button>
+				</div>
+			</div>
+			<div class="portfolio_item">
+				<div class="item_title">
+					<h1>Верстка шаблона</h1>
+					<p>С каждой строчкой кода я погружался и открывал
+						для себя новые возможности, идеи и сложности их выполнения</p>
+					<button><a href="https://sergey-okey.github.io/Case_2/">Перейти</a></button>
+				</div>
+				<div class="item_img">
+					<img src=".//assets/images/portfolio/case2.webp" alt="">
+				</div>
+			</div>
+			<div class="portfolio_item">
+				<div class="item_img">
+					<img src=".//assets/images/portfolio/case3.webp" alt="">
+				</div>
+				<div class="item_title">
+					<h1>Верстка лендинга</h1>
+					<p>Познакомившись со статистикой пользовательского опыта, я научился верстать шаблоны для различных
+						устройств, начиная от телевизоров с повышенной диагональю и заканчивая телефонами самых разных
+						размеров
+					</p>
+					<button><a href="https://sergey-okey.github.io/case-3-react-scss.../">Перейти</a></button>
+				</div>
+			</div>
+			<div class="portfolio_item">
+				<div class="item_title">
+					<h1>Шаблон "Bootstrap"</h1>
+					<p>
+						Обладая пониманием того, как воплотить дизайн, который будет дышать и эффективно взаимодействовать с
+						пользователем, я освоил язык программирования JavaScript и успешно применял его к различным шаблонам
+						от
+						Bootstrap</p>
+					<button><a href="https://sergey-okey.github.io/Case-4/">Перейти</a></button>
+				</div>
+				<div class="item_img">
+					<img src=".//assets/images/portfolio/case4.webp" alt="">
+				</div>
+			</div>
+			<div class="portfolio_item">
+				<div class="item_img">
+					<img src=".//assets/images/portfolio/sistema.webp" alt="">
+				</div>
+				<div class="item_title">
+					<h1>Верстка шаблона сайта для компании</h1>
+					<p>Обретя обширный опыт и усвоив множество навыков, я принял решение предлогать свои услуги. Один из
+						веб-сайтов
+						был придуман и полностью воплащен мной, для компании </p>
+					<button><a href="https://sergey-okey.github.io/sistema-center.ru-case_4/">Перейти</a></button>
+				</div>
+			</div>
+			<div class="portfolio_item">
+
+				<div class="item_title">
+					<h1>Один из сайтов под ключ</h1>
+					<p>Второй полноценный сайт "под ключ" для настоящих профессионалов требовал удобства, красоты и
+						информативности. Решив принять вызов, я с удовольствием воплотил их желание в жизнь</p>
+					<button><a href="https://ваш-климат.online">Перейти</a></button>
+				</div>
+				<div class="item_img">
+					<img src=".//assets/images/portfolio/your-climat.webp" alt="">
+				</div>
+			</div>
+		</div>
+	</article>
+
+	<article id="about" class="about">
+		<div class="about_container">
+			<h1 class="animated-heading">Почему я?</h1>
+			<div class="about_items">
+
+				<div class="item_container">
+					<div class="item" data-aos="fade-right" data-aos-delay="100">
+						<img src=".//assets/images/about/experience.webp" alt="experience">
+						<span>Опыт больше 2 лет.</span>
+					</div>
+					<div class="item" data-aos="fade-right" data-aos-delay="200">
+						<img src=".//assets/images/about/diploma.webp" alt="diploma">
+						<span>Имею диплом государственного образца, от школы Sinergy.</span>
+					</div>
+					<div class="item" data-aos="fade-right" data-aos-delay="300">
+						<img src=".//assets/images/about/term.webp" alt="term">
+						<span>Уделяю особое внимание срокам и качеству выполнения.</span>
+					</div>
+					<div class="item" data-aos="fade-right" data-aos-delay="400">
+						<img src=".//assets/images/about/customers.webp" alt="">
+						<span>Мной довольный более 28+ клиентов.</span>
+					</div>
+					<div class="item" data-aos="fade-right" data-aos-delay="500">
+						<img src=".//assets/images/about/addition.webp" alt="">
+						<span>Администрирую и дополняю выполненные проекты.</span>
+					</div>
+				</div>
+			</div>
+			<section class="additions">
+				<div class="additions_container">
+					<div class="diploma">
+						<img src=".//assets/images/about/Sertf.webp" alt="Sertf">
+					</div>
+				</div>
+			</section>
+		</div>
+	</article>
+	<article class="work">
+		<h1>Как я работаю?</h1>
+		<div class="work_container">
+			<ol style="--length: 5" role="list">
+				<li style="--i: 1">
+					<h3>Знакомство с клиентом.</h3>
+					<p>Персональное знакомство с клиентом для эффективного взаимодействия и воплощения ваших идей в жизнь!
+					</p>
+				</li>
+				<li style="--i: 2">
+					<h3>Подбор дизайна, планирование структуры сайта.</h3>
+					<p>Инновационный дизайн и эффективная структура – ключевые элементы вашего успешного сайта. Доверьте мне
+						создание привлекательного внешнего вида и удобной навигации и взаимодействия вашим сайтом!</p>
+				</li>
+				<li style="--i: 3">
+					<h3>Создание сайта, воплощение задуманного.</h3>
+					<p>Что бы вы ни задумали - блог, портфолио или визитку - я здесь, чтобы сделать процесс создания
+						сайта легким и веселым. Создам, как через код, так и через конструкторы сайтов (Tilda, WordPress, Wix
+						и
+						другие). Доверьте мне вашу концепцию, и вместе мы создадим онлайн пространство, которое
+						точно отражает ваш стиль и намерения.</p>
+				</li>
+				<li style="--i: 4">
+					<h3>Внесение дополнений и исправление ошибок</h3>
+					<p>В данный момент я готов внести любые дополнения и исправить все ошибки на вашем сайте. Будь то новые
+						функции, обновленный дизайн или устранение технических недочетов.</p>
+				</li>
+				<li style="--i: 5">
+					<h3>Публикация сайта, настройка домена и хостинга.</h3>
+					<p>Ваш сайт готов к завоеванию интернета! Я не только создам его, но и помогу опубликовать, настроить
+						домен
+						и хостинг.</p>
+				</li>
+			</ol>
+		</div>
+	</article>
+	</main>
+	<footer id="contact" class="footer">
+		<div class="footer_container">
+			<div class="section_nav">
+				<div class="logo">
+					<h1>
+						S<span class="rotateSymbol">&lt;&gt;</span>K
+					</h1>
+					<div class="form">
+						<form action="/path/to/your/email/script.php" method="post">
+							<label for="recipient"></label>
+							<input type="email" id="recipient" name="recipient" required placeholder="Email">
+							<label for="subject"></label>
+							<input type="text" id="subject" name="subject" required placeholder="Тема">
+							<label for="message"></label>
+							<textarea id="message" name="message" rows="4" required placeholder="Сообщение"></textarea>
+							<button type="submit">Отправить</button>
+						</form>
+					</div>
+				</div>
+				<div class="contact">
+					<span>Контакты</span>
+					<a href="mailto:sergeyborisov_1@vk.ru">sergeyborisov_1@vk.ru</a>
+					<a href="tel:+79961647574">+7 (996) 164 75 74</a>
+					<button class="button_scroll" onclick="scrollToTop()">&#8593;</button>
+				</div>
+			</div>
+			<div class="section_link">
+				<span>Copyright <a href="/">@SOK</a> 2024, Все права защищены</span>
+				<div>
+					<img src=".//assets/images/footer/github.webp" alt="">
+					<a href="https://github.com/Sergey-Okey">GitHub</a>
+				</div>
+				<div>
+					<img src=".//assets/images/footer/vk.webp" alt="vk">
+					<a href="https://vk.com/sergeyborisov_1">Vk</a>
+				</div>
+				<div>
+					<img src=".//assets/images/footer/telegram.webp" alt="">
+					<a href="https://t.me/sergeyborisov_01">Telegram</a>
+				</div>
+				<div><img src=".//assets/images/footer/instagram.webp" alt="">
+					<a href="https://www.instagram.com/sergeyborisov_1/">#gram</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript">
+		(function (m, e, t, r, i, k, a) {
+			m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+			m[i].l = 1 * new Date();
+			for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+			k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+		})
+			(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+		ym(96668150, "init", {
+			clickmap: true,
+			trackLinks: true,
+			accurateTrackBounce: true,
+			webvisor: true
+		});
+	</script>
+	<noscript>
+		<div><img src="https://mc.yandex.ru/watch/96668150" style="position:absolute; left:-9999px;" alt="" /></div>
+	</noscript>
+	<!-- /Yandex.Metrika counter -->
+</body>
+
+</html>

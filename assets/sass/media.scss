@@ -1,0 +1,194 @@
+@import './colors.scss';
+
+@media only screen and (max-width: 767px) {
+	body {
+		position: relative;
+		margin: 0;
+	}
+
+	.header {
+		position: sticky;
+		top: 0;
+		z-index: 2;
+		background-color: inherit;
+		backdrop-filter: blur(10px);
+		border-bottom: $border;
+		border-bottom-left-radius: 30px;
+		border-bottom-right-radius: 30px;
+
+		h1 {
+			margin: 10px 0;
+		}
+	}
+
+	.window {
+		margin: 20px 10px;
+		border-radius: 30px;
+		height: 100%;
+	}
+
+	.windows {
+		border-radius: 30px
+	}
+
+	.header_content {
+		width: 95%;
+	}
+
+	main {
+		overflow-x: hidden;
+	}
+
+	.greting_content {
+		width: 95%;
+		flex-direction: column;
+		gap: 0;
+
+		.greting_prevew {
+			z-index: -1;
+			opacity: 0.2;
+			margin: 0;
+			width: 100%;
+
+			#neon {
+				width: 400px;
+				justify-content: center;
+				display: none;
+			}
+
+			#skill {
+				display: none;
+			}
+		}
+
+		.greting_title {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	.header_content {
+		#nav {
+			display: none;
+		}
+	}
+
+	.skills {
+		width: 100%;
+		padding: 20px 0;
+
+		.skills_content {
+			width: 100%;
+		}
+
+		.skills_list {
+			width: 100%;
+			flex-wrap: wrap;
+			justify-content: center;
+			z-index: 1;
+
+			.skills_item {
+				width: 150px;
+				border-radius: 30px;
+				z-index: 2;
+			}
+		}
+	}
+
+	.portfolio {
+		padding: 30px 0;
+		border-top-right-radius: 30px;
+		border-top-left-radius: 30px;
+
+
+		&_container {
+			width: 95%;
+			padding: 0;
+			gap: 50px;
+
+		}
+
+		.portfolio_item {
+			margin: 0 auto;
+			flex-wrap: wrap;
+			border-radius: 30px;
+			padding: 10px;
+
+
+			h1 {
+				font-size: 1.5rem;
+			}
+
+			p {
+				font-size: 1rem;
+			}
+		}
+
+		.item_title {
+			order: 2;
+		}
+
+		.item_img {
+			width: 100%;
+
+			img {
+				order: 1;
+				width: 100%;
+				border-radius: 20px;
+			}
+		}
+	}
+
+	.about {
+		padding: 20px 0;
+		width: 100%;
+
+		.about_container {
+			width: 100%;
+			padding: 20px;
+			border-radius: 30px;
+
+			h1 {
+				font-size: 2rem;
+			}
+		}
+
+		.about_items {
+			#yellow {
+				display: none;
+			}
+		}
+	}
+
+	.footer {
+		box-shadow: 0;
+		margin: 0;
+
+		.section_nav {
+			flex-wrap: wrap;
+			background: $background;
+			border-top-right-radius: 30px;
+			border-top-left-radius: 30px;
+
+		}
+
+		.section_link {
+			width: 100%;
+			flex-wrap: wrap;
+			gap: 20px;
+		}
+
+		.section_link span {
+			text-align: center;
+		}
+	}
+
+	.sidebar_mobile {
+		display: block;
+		transition: height 0.3s ease-in-out;
+	}
+
+	.sidebar_desktop {
+		display: none;
+	}
+}
