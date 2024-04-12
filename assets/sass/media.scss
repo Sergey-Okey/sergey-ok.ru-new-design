@@ -2,14 +2,14 @@
 
 @media only screen and (max-width: 767px) {
 	body {
-		position: relative;
 		margin: 0;
 	}
 
 	.header {
 		position: sticky;
 		top: 0;
-		z-index: 2;
+		width: 100%;
+		z-index: 5;
 		background-color: inherit;
 		backdrop-filter: blur(10px);
 		border-bottom: $border;
@@ -25,10 +25,22 @@
 		margin: 20px 10px;
 		border-radius: 30px;
 		height: 100%;
+		z-index: 5;
 	}
 
 	.windows {
-		border-radius: 30px
+		border-radius: 30px;
+		z-index: 5;
+
+		#canvas {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			border-radius: 30px;
+		}
 	}
 
 	.header_content {
@@ -64,6 +76,7 @@
 		.greting_title {
 			width: 100%;
 			height: 100%;
+			margin-top: 30px;
 		}
 	}
 
@@ -141,10 +154,9 @@
 
 	.about {
 		padding: 20px 0;
-		width: 100%;
+		overflow-x: hidden;
 
 		.about_container {
-			width: 100%;
 			padding: 20px;
 			border-radius: 30px;
 

@@ -25,6 +25,7 @@ body {
 }
 
 .window {
+  position: relative;
   background: unset;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
@@ -34,12 +35,80 @@ body {
 }
 
 .windows {
+  position: relative;
   background: radial-gradient(100% 100% at 50% 50%, #a100ff 0%, #71c4ff 100%);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   border-radius: 90px;
   margin: 10px;
   border: solid 1px rgba(255, 255, 255, 0.125);
+}
+.windows #canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 100px;
+}
+.windows .sidebar_desktop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  transition: right 0.5s ease;
+  padding: 50px;
+  transition: right 1s ease;
+  border: solid 3px rgba(255, 255, 255, 0.4039215686);
+  border-radius: 90px;
+  z-index: 4;
+  background-color: unset;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.windows .sidebar_desktop span:active {
+  transform: rotate(100deg);
+  transition: 0.1s ease;
+  color: rgb(251, 252, 252);
+}
+.windows .sidebar_desktop span {
+  cursor: pointer;
+}
+.windows .sidebar_desktop form {
+  display: flex;
+  flex-direction: column;
+}
+.windows .sidebar_desktop form input,
+.windows .sidebar_desktop form textarea {
+  display: block;
+  padding: 10px;
+  border-radius: 10px;
+  border: 0;
+  margin-bottom: 20px;
+  width: 250px;
+}
+.windows .sidebar_desktop form label {
+  color: rgb(251, 252, 252);
+}
+.windows .sidebar_desktop form .btn-sider {
+  padding: 10px 20px;
+  font-weight: 700;
+  width: 100%;
+  height: 50px;
+  font-size: 1.3rem;
+  color: #ffffff;
+  cursor: pointer;
+  margin-top: 100px;
+  background: black;
+  text-transform: uppercase;
+  border: solid 2px white;
+}
+.windows .sidebar_desktop form .btn-sider:hover {
+  background: rgb(251, 252, 252);
+  color: rgb(0, 0, 0);
+  transition: 0.3s ease;
+  border: solid 2px black;
 }
 
 .header_content {
@@ -108,7 +177,7 @@ body {
   right: 0;
   transition: right 0.5s ease;
   padding: 50px;
-  z-index: 4;
+  z-index: 10;
   display: flex;
   border: solid 3px rgba(255, 255, 255, 0.4039215686);
   border-radius: 20px;
@@ -126,91 +195,20 @@ body {
   font-size: 2rem;
   font-weight: 700;
 }
-.header_content .sidebar_desktop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  transition: right 0.5s ease;
-  padding: 50px;
-  transition: right 1s ease;
-  border: solid 3px rgba(255, 255, 255, 0.4039215686);
-  border-radius: 90px;
-  z-index: 3;
-  background-color: unset;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-}
-.header_content .sidebar_desktop span:active {
-  transform: rotate(100deg);
-  transition: 0.1s ease;
-  color: rgb(251, 252, 252);
-}
-.header_content .sidebar_desktop span {
-  cursor: pointer;
-}
-.header_content .sidebar_desktop form {
-  display: flex;
-  flex-direction: column;
-}
-.header_content .sidebar_desktop form input,
-.header_content .sidebar_desktop form textarea {
-  display: block;
-  padding: 10px;
-  border-radius: 10px;
-  border: 0;
-  margin-bottom: 20px;
-  width: 250px;
-}
-.header_content .sidebar_desktop form label {
-  color: rgb(251, 252, 252);
-}
-.header_content .sidebar_desktop form .btn-sider {
-  padding: 10px 20px;
-  font-weight: 700;
-  width: 100%;
-  height: 50px;
-  font-size: 1.3rem;
-  color: #ffffff;
-  cursor: pointer;
-  margin-top: 150px;
-  background: black;
-  text-transform: uppercase;
-  border: solid 2px white;
-}
-.header_content .sidebar_desktop form .btn-sider:hover {
-  background: rgb(251, 252, 252);
-  color: rgb(0, 0, 0);
-  transition: 0.3s ease;
-  border: solid 2px black;
-}
 
 .greting_content {
   display: flex;
-  width: 70%;
+  width: 85%;
   margin: auto;
-  gap: 100px;
   border-bottom-left-radius: 100px;
   border-bottom-right-radius: 100px;
 }
 
 .greting_prevew {
+  width: 100%;
+  margin: 50px 0;
   position: relative;
   display: flex;
-}
-.greting_prevew #skill {
-  width: 300px;
-  position: absolute;
-  top: 6rem;
-  left: 7rem;
-  z-index: 2;
-}
-.greting_prevew #neon {
-  width: 750px;
-  position: absolute;
-  top: -7rem;
-  left: -6rem;
-  z-index: -1;
 }
 
 .animated-letter,
@@ -229,7 +227,7 @@ body {
   }
 }
 .greting_title {
-  width: 50%;
+  width: 100%;
   margin-top: 100px;
 }
 .greting_title span {
@@ -270,7 +268,7 @@ body {
   padding: 100px 0;
   display: flex;
   justify-content: center;
-  z-index: 2;
+  z-index: 1;
 }
 .skills_content {
   width: 60%;
@@ -288,6 +286,7 @@ body {
 .skills_content .skills_list {
   display: flex;
   gap: 20px;
+  z-index: 1;
 }
 .skills_content .skills_item {
   width: 200px;
@@ -303,6 +302,7 @@ body {
   align-items: center;
   gap: 10px;
   opacity: 0;
+  z-index: 1;
   transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
@@ -310,9 +310,6 @@ body {
   color: #ffffff;
   font-size: 1.5rem;
   text-transform: uppercase;
-}
-.skills_content .skills_item:hover {
-  box-shadow: 0 0 5px 0 rgb(251, 252, 252);
 }
 
 .about {

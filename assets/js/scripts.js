@@ -178,3 +178,7 @@ function updateProgressBar(event) {
 		}
 	});
 }
+
+
+
+

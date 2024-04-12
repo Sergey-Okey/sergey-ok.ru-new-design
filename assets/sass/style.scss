@@ -15,8 +15,6 @@
 	border-radius: 5px;
 }
 
-
-
 body {
 	width: 100%;
 	font-family: "onest";
@@ -29,19 +27,97 @@ body {
 }
 
 .window {
+	position: relative;
 	background: unset;
 	backdrop-filter: blur(10px);
 	border-radius: 100px;
 	border: $border;
 	margin: 50px 150px;
+
 }
 
 .windows {
+	position: relative;
 	background: $background;
 	backdrop-filter: blur(10px);
 	border-radius: 90px;
 	margin: 10px;
 	border: solid 1px rgba(255, 255, 255, 0.125);
+
+	#canvas {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		border-radius: 100px;
+	}
+
+	.sidebar_desktop {
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		transition: right 0.5s ease;
+		padding: 50px;
+		transition: right 1s ease;
+		border: $border;
+		border-radius: 90px;
+		z-index: 4;
+		background-color: unset;
+		backdrop-filter: blur(10px);
+
+		span:active {
+			transform: rotate(100deg);
+			transition: 0.1s ease;
+			color: $accent;
+		}
+
+		span {
+			cursor: pointer;
+		}
+
+		form {
+			display: flex;
+			flex-direction: column;
+
+			input,
+			textarea {
+				display: block;
+				padding: 10px;
+				border-radius: 10px;
+				border: 0;
+				margin-bottom: 20px;
+				width: 250px;
+			}
+
+			label {
+				color: $accent;
+			}
+
+			.btn-sider {
+				padding: 10px 20px;
+				font-weight: 700;
+				width: 100%;
+				height: 50px;
+				font-size: 1.3rem;
+				color: #ffffff;
+				cursor: pointer;
+				margin-top: 100px;
+				background: black;
+				text-transform: uppercase;
+				border: solid 2px white;
+			}
+
+			.btn-sider:hover {
+				background: $accent;
+				color: rgb(0, 0, 0);
+				transition: 0.3s ease;
+				border: solid 2px black;
+			}
+		}
+	}
 }
 
 .header_content {
@@ -131,7 +207,7 @@ body {
 		right: 0;
 		transition: right 0.5s ease;
 		padding: 50px;
-		z-index: 4;
+		z-index: 10;
 		display: flex;
 		border: $border;
 		border-radius: 20px;
@@ -153,70 +229,7 @@ body {
 		}
 	}
 
-	.sidebar_desktop {
-		position: fixed;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		transition: right 0.5s ease;
-		padding: 50px;
-		transition: right 1s ease;
-		border: $border;
-		border-radius: 90px;
-		z-index: 3;
-		background-color: unset;
-		backdrop-filter: blur(10px);
 
-		span:active {
-			transform: rotate(100deg);
-			transition: 0.1s ease;
-			color: $accent;
-		}
-
-		span {
-			cursor: pointer;
-		}
-
-		form {
-			display: flex;
-			flex-direction: column;
-
-			input,
-			textarea {
-				display: block;
-				padding: 10px;
-				border-radius: 10px;
-				border: 0;
-				margin-bottom: 20px;
-				width: 250px;
-			}
-
-			label {
-				color: $accent;
-			}
-
-			.btn-sider {
-				padding: 10px 20px;
-				font-weight: 700;
-				width: 100%;
-				height: 50px;
-				font-size: 1.3rem;
-				color: #ffffff;
-				cursor: pointer;
-				margin-top: 150px;
-				background: black;
-				text-transform: uppercase;
-				border: solid 2px white;
-			}
-
-			.btn-sider:hover {
-				background: $accent;
-				color: rgb(0, 0, 0);
-				transition: 0.3s ease;
-				border: solid 2px black;
-			}
-		}
-	}
 }
 
 //Greting
@@ -224,32 +237,18 @@ body {
 
 .greting_content {
 	display: flex;
-	width: 70%;
+	width: 85%;
 	margin: auto;
-	gap: 100px;
+
 	border-bottom-left-radius: 100px;
 	border-bottom-right-radius: 100px;
 }
 
 .greting_prevew {
+	width: 100%;
+	margin: 50px 0;
 	position: relative;
 	display: flex;
-
-	#skill {
-		width: 300px;
-		position: absolute;
-		top: 6rem;
-		left: 7rem;
-		z-index: 2;
-	}
-
-	#neon {
-		width: 750px;
-		position: absolute;
-		top: -7rem;
-		left: -6rem;
-		z-index: -1;
-	}
 }
 
 .animated-letter,
@@ -269,7 +268,7 @@ body {
 }
 
 .greting_title {
-	width: 50%;
+	width: 100%;
 	margin-top: 100px;
 
 	span {
@@ -318,7 +317,7 @@ body {
 	padding: 100px 0;
 	display: flex;
 	justify-content: center;
-	z-index: 2;
+	z-index: 1;
 
 	&_content {
 		width: 60%;
@@ -337,6 +336,7 @@ body {
 		.skills_list {
 			display: flex;
 			gap: 20px;
+			z-index: 1;
 		}
 
 		.skills_item {
@@ -352,6 +352,7 @@ body {
 			align-items: center;
 			gap: 10px;
 			opacity: 0;
+			z-index: 1;
 			transform: translateY(20px);
 			transition: opacity 0.5s ease, transform 0.5s ease;
 
@@ -361,10 +362,6 @@ body {
 				font-size: 1.5rem;
 				text-transform: uppercase;
 			}
-		}
-
-		.skills_item:hover {
-			box-shadow: 0 0 5px 0 $accent;
 		}
 	}
 }
